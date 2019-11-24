@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/sharp_bookmark_24"/>
+
+    <item
+        android:top="8dp"
+        android:bottom="12dp"
+        android:left="10dp"
+        android:right="10dp"
+        android:drawable="@drawable/sharp_add_24"/>
+</layer-list>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.NoActionBar.Home" parent="AppTheme.NoActionBar">
+        <!--<item name="android:windowBackground">@color/colorWindowBG</item>-->
+        <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+        <!--<item name="colorPrimaryFocus">@color/colorAirPrimaryFocus</item>-->
+        <!--<item name="colorPrimaryOpaque60">@color/colorPrimaryOpaque60</item>-->
+        <!--<item name="colorPrimaryLight">@color/colorPrimaryLight</item>-->
+        <!--<item name="colorControlNormal">@color/colorDefaultText</item>-->
+        <!--<item name="recentSearchBackground">@drawable/air_recent_search_bg</item>-->
+        <!--<item name="colorPrimary">@color/colorAirPrimary</item>-->
+        <!--<item name="android:textColorSecondary">@color/colorInverseText</item>-->
+        <!--<item name="dialogTheme">@style/BottomFullDialog</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorAirPrimaryDark</item>-->
+        <!--<item name="colorControlActivated">@color/colorAirPrimary</item>-->
+        <!--<item name="colorControlHighlight">@color/colorAirPrimary</item>-->
+        <!--<item name="colorAccentLight">@color/colorAccentLight</item>-->
+        <!--<item name="colorAccent">@color/colorAirAccent</item>-->
+        <!--<item name="colorSelectedOption">@color/colorSelectedOption</item>-->
+        <!--<item name="colorLoaderReveal">@color/colorLoaderReveal</item>-->
+    </style>
+</resources>

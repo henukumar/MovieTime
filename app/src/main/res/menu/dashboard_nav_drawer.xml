@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group_sections"
+        android:checkableBehavior="single"
+        android:visible="true">
+        <item
+            android:id="@+id/nav_movie"
+            android:icon="@drawable/nav_icon_movie"
+            android:orderInCategory="1"
+            android:title="Movies"
+            android:iconTint="@color/colorOnPrimary"/>
+        <item
+            android:id="@+id/nav_tv_series"
+            android:icon="@drawable/nav_icon_tv"
+            android:orderInCategory="1"
+            android:title="TV Series"
+            android:iconTint="@color/colorOnPrimary"/>
+        <item
+            android:id="@+id/nav_celebrity"
+            android:icon="@drawable/nav_icon_person"
+            android:orderInCategory="1"
+            android:title="Celebrity"
+            android:iconTint="@color/colorOnPrimary"/>
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/nav_icon_search"
+            android:orderInCategory="1"
+            android:title="Search"
+            android:iconTint="@color/colorOnPrimary"/>
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/nav_icon_setting"
+            android:orderInCategory="1"
+            android:title="Settings"
+            android:iconTint="@color/colorOnPrimary"/>
+    </group>
+</menu>

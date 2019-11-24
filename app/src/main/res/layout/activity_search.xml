@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.kalher.movietime.common.view.CustomDrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/navDrawer"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorPrimary"
+        tools:openDrawer="start">
+
+        <include
+            layout="@layout/content_activity_search"
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <include layout="@layout/layout_navigation_view"
+            android:id="@+id/layout_navigation"/>
+    </com.kalher.movietime.common.view.CustomDrawerLayout>
+</layout>

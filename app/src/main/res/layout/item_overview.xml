@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/overview_card_height"
+        android:padding="@dimen/overview_card_content_padding">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/fl_item_poster"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_width="@dimen/overview_poster_width"
+                android:layout_height="match_parent"
+                android:id="@+id/sdv_item_poster"/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:alpha=".6"
+                android:layout_marginTop="-5dp"
+                android:layout_marginLeft="-9dp"
+                android:layout_gravity="top"
+                app:srcCompat="@drawable/bookmark"/>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_movie_title"
+            android:text="Movie Title"
+            android:ellipsize="middle"
+            android:layout_marginLeft="@dimen/overview_detail_margin_left"
+            app:layout_constraintLeft_toRightOf="@id/fl_item_poster"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_release_date"
+            android:text="2019"
+            android:layout_marginLeft="@dimen/overview_detail_margin_left"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_title"
+            app:layout_constraintLeft_toRightOf="@id/fl_item_poster"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_duration"
+            android:text="2h 2min"
+            android:layout_marginLeft="@dimen/overview_detail_horizontal_gap"
+            app:layout_constraintLeft_toRightOf="@id/tv_release_date"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_rating"
+            android:text="9.1"
+            android:layout_marginLeft="@dimen/overview_detail_margin_left"
+            app:layout_constraintTop_toBottomOf="@id/tv_release_date"
+            app:layout_constraintLeft_toRightOf="@id/fl_item_poster"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_genere"
+            android:text="Crime, Thriller, Horror"
+            android:ellipsize="middle"
+            android:layout_marginLeft="@dimen/overview_detail_margin_left"
+            app:layout_constraintTop_toBottomOf="@id/tv_rating"
+            app:layout_constraintLeft_toRightOf="@id/fl_item_poster"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

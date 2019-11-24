@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#673AB7</color>
+    <color name="colorPrimaryVariant">#522F92</color>
+    <color name="colorPrimaryDark">#4a148c</color>
+    <color name="colorPrimaryShadow">#F6F3FA</color>
+    <color name="colorTextOnPrimaryShadow">#6D6A71</color>
+    <color name="colorPrimaryTextOnPrimaryShadow">#673AB7</color>
+    <color name="colorAccent">#9D22B1</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnPrimaryVariant">#02C9B5</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorDarkBackground">#EEEEEE</color>
+    <color name="colorIconOnPrimary">#FFFFFF</color>
+    <color name="colorIconOnBackground">#616161</color><!-- Gray -->
+    <color name="colorIconOnBackgroundVariant">#7E818C</color><!-- Blue gray -->
+
+    <color name="colorTextOnPrimary">#FFFFFF</color>
+    <color name="colorLighterTextOnBackground">#9E9E9E</color>
+    <color name="colorLightTextOnBackground">#757575</color>
+    <color name="colorTextOnBackground">#212121</color>
+    <color name="colorTextOnBackgroundVariant">#515463</color><!-- Blue gray -->
+    <color name="colorDarkTextOnBackground">#101010</color>
+    <color name="colorError">#EC5745</color>
+    <color name="colorAlert">#ED151F</color>
+
+    <color name="colorLabel">#65BA69</color>
+    <color name="colorLabelDark">#00c853</color>
+
+    <color name="colorGraySeprator">#DBDBDB</color>
+    <color name="colorOverlay">#FFFFFF</color>
+</resources>

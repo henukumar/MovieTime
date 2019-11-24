@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="drawer_width">250dp</dimen>
+
+    <dimen name="overview_card_height">150dp</dimen>
+    <dimen name="overview_card_content_padding">10dp</dimen>
+    <dimen name="overview_detail_top_padding">10dp</dimen>
+    <dimen name="overview_detail_margin_left">15dp</dimen>
+    <dimen name="overview_detail_margin_right">10dp</dimen>
+    <dimen name="overview_detail_margin_bottom">10dp</dimen>
+    <dimen name="overview_detail_horizontal_gap">10dp</dimen>
+    <dimen name="overview_detail_vertical_gap_minor">8dp</dimen>
+    <dimen name="overview_detail_vertical_gap">10dp</dimen>
+    <dimen name="overview_detail_vertical_gap_major">15dp</dimen>
+    <dimen name="overview_poster_width">100dp</dimen>
+</resources>

@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="android:editTextStyle">@style/HomeInputStyle</item>-->
+        <!--<item name="editTextStyle">@style/HomeInputStyle</item>-->
+        <!--<item name="errorTextAppearance">@style/ErrorLabelAppearance</item>-->
+        <!--<item name="hintTextAppearance">@style/TextLabelAppearance</item>-->
+        <!--<item name="android:textSize">@dimen/default_label_size</item>-->
+        <!--<item name="android:textColorHint">@color/colorHintText</item>-->
+        <!--<item name="android:textColorSecondary">@color/colorInverseText</item>-->
+        <item name="colorControlNormal">?colorPrimary</item>
+        <item name="colorControlActivated">?colorPrimary</item>
+        <item name="colorControlHighlight">?colorPrimary</item>
+        <!--<item name="colorSelectedOption">@color/colorSelectedOption</item>-->
+        <!--<item name="colorLoaderReveal">@color/colorLoaderReveal</item>-->
+
+        <!--<item name="colorLoaderIcon">@color/colorLoaderIcon</item>-->
+        <!--<item name="colorLoaderSpinnerStart">@color/colorLoaderSpinnerStart</item>-->
+        <!--<item name="colorLoaderSpinnerMid">@color/colorLoaderSpinnerMid</item>-->
+        <!--<item name="colorLoadingInfo">@color/colorLoadingInfo</item>-->
+        <!--<item name="colorLoadingWaitText">@color/colorLoadingWaitText</item>-->
+    </style>
+
+    <style name="AppTheme.NoActionBar.Home.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.Home.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.Home.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>
