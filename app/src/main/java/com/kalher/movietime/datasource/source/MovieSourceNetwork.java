@@ -10,6 +10,7 @@ import com.kalher.movietime.base.MovieTime;
 import com.kalher.movietime.common.AppConfig;
 import com.kalher.movietime.common.UIAction;
 import com.kalher.movietime.common.interfaces.IShow;
+import com.kalher.movietime.datasource.EntityToModelConverter;
 import com.kalher.movietime.datasource.ModelToEntityConverter;
 import com.kalher.movietime.datasource.datasourcefactory.MovieDataSourceFactory;
 import com.kalher.movietime.datasource.db.DatabaseFactory;
@@ -17,14 +18,18 @@ import com.kalher.movietime.datasource.model.movie.ShowListResult;
 import com.kalher.movietime.datasource.webservice.ApiClient;
 import com.kalher.movietime.datasource.webservice.url.WebServiceURL;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 import io.reactivex.Completable;
+import io.reactivex.CompletableObserver;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Action;
 import io.reactivex.schedulers.Schedulers;
 import timber.log.Timber;
 
@@ -90,40 +95,32 @@ public class MovieSourceNetwork {
 //        Completable movieTagInsertionCompletable = Completable.fromAction(() -> DatabaseFactory.getDbInstance().movieTagDao()
 //                .insertRecordList(ModelToEntityConverter.getMovieTagEntityList(movieListResult, "")));
 
+        final int[] page = {1};
+        if(initialCallback == null){
+            page[0] = params.key;
+        }
+
+        Action getMovieAction = new Action() {
+            @Override
+            public void run() throws Exception {
+                List<IShow> movieList = new ArrayList<>(EntityToModelConverter.
+                        getMovieListFromMovieEntityList(DatabaseFactory.getDbInstance().movieDao().getMovieByPage(page[0], uiAction.name())));
+                if(initialCallback != null){
+                    initialCallback.onResult(movieList, page[0], page[0]+1);
+                }
+                if(callback != null){
+                    callback.onResult(movieList, page[0]+1);
+                }
+            }
+        };
+        Completable getMoviesCompletable = Completable.fromAction(getMovieAction);
+
         movieListInsertionCompletable
 //                .andThen(movieTagInsertionCompletable)
+                .andThen(getMoviesCompletable)
                 .subscribeOn(Schedulers.io())   // run on separate background thread
                 .observeOn(AndroidSchedulers.mainThread())  // return callback on main(UI) thread
                 .subscribe();
-//                        new CompletableObserver() {
-//                    @Override
-//                    public void onSubscribe(Disposable d) {
-//                        Timber.i(TAG, "TrackPaging onSubscribe MovieListInsertionCompletable");
-//                    }
-//
-//                    @Override
-//                    public void onComplete() {
-//                        Timber.i(TAG, "TrackPaging onComplete MovieListInsertionCompletable");
-//                        int page = 1;
-//                        if(initialCallback == null){
-//                            page = params.key;
-//                        }
-//                        List<IShow> movieList = new ArrayList<>(EntityToModelConverter.
-//                                getMovieListFromMovieEntityList(DatabaseFactory.getDbInstance().movieDao().getMovieByPage(page)));
-//                        if(initialCallback != null){
-//                            initialCallback.onResult(movieList, page, page+1);
-//                        }
-//                        if(callback != null){
-//                            callback.onResult(movieList, page+1);
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onError(Throwable e) {
-//                        Timber.i(TAG, "TrackPaging onError MovieListInsertionCompletable");
-//                    }
-//                });
-
     }
 
     private static Map<UIAction, DataSource> dataSourceMap = new HashMap<>();

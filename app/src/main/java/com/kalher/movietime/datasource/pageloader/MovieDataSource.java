@@ -49,7 +49,7 @@ public class MovieDataSource extends PageKeyedDataSource<Integer, IShow> {
         if (movieList != null && movieList.size() > 0) {
             callback.onResult(movieList, params.key + 1);
         } else {
-            callback.onResult(movieList, params.key);   // boundary callback onItemAtEndLoaded will be called
+//            callback.onResult(movieList, params.key);   // boundary callback onItemAtEndLoaded will be called
             MovieSourceNetwork.getInstance().fetchShowListFromApi(uiAction, params.key, null, params, callback);  //now boundary callback won't be used anymore
         }
     }
