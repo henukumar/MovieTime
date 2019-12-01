@@ -7,7 +7,7 @@ MovieTime provide list of now playing, upcoming, top rated & popular movies usin
 
 ## Components Used
 * MVVM Architecture (ViewModel, Data Binding, Live data, Paging Library, Room)
-* Paging library to load data
+* Paging library to load data from SQLite
 * SQLite with Room for data caching
 * Retrofit for network calls
 * Fresco for image loading & caching
