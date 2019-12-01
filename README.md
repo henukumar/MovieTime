@@ -12,4 +12,5 @@ MovieTime provide list of now playing, upcoming, top rated & popular movies usin
 * Retrofit for network calls
 * Fresco for image loading & caching
 * Jackson for json parsing
+* Timber for logging
 
