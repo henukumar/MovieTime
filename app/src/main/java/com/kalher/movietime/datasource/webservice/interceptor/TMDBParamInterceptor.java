@@ -14,7 +14,7 @@ public class TMDBParamInterceptor implements Interceptor {
         Request originalRequest = chain.request();
         HttpUrl originalHttpUrl = originalRequest.url();
         HttpUrl mUrl = originalHttpUrl.newBuilder()
-                .addQueryParameter("api_key","b99f54d84b337288971f1cca257d4a7f")
+                .addQueryParameter("api_key","insert api key here")
                 .build();
         Request.Builder requestBuilder  = originalRequest.newBuilder()
                 .url(mUrl);
